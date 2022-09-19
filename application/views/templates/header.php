@@ -152,7 +152,7 @@
                <ul class="nav side-menu">
 					<li><a><i class="fa fa-cog"></i>Settings<span class="fa fa-chevron-down"></span></a>
 					<ul class="nav child_menu">
-					<li><a href="<?php echo base_url('Admin/user_list'); ?>">User Profile</a></li>
+				<!--	<li><a href="<?php echo base_url('Admin/user_list'); ?>">User Profile</a></li> -->
 					<li><a href="<?php echo base_url('Admin/role_list');?>">Roles</a></li>
                     </ul>
                 </ul>
