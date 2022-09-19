@@ -177,7 +177,7 @@
       
       </div>
       <div class="modal-footer">
-        <input type="submit"class="btn btn-success" value="Submit" name="submit" style="width: 100px;height: 40px; color: #fff;  background-color: #26851f;font-size: 16px;margin-left: 1px; margin-top: 10px;">
+        <input type="submit"class="btn btn-success" value="Submit" name="submit">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

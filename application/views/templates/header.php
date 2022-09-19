@@ -59,6 +59,14 @@
 .right_col{
 	min-height: 800px;
 }
+.nav>li>a>img {
+    max-width: none;
+    margin-top: -10px;
+}
+.table-responsive {
+    min-height: 400px;
+    overflow-x: auto;
+}
 	</style>
 
   <body class="nav-md">
@@ -80,13 +88,6 @@
                 </script>
            
      </div> 
-<style>
-.nav>li>a>img {
-    max-width: none;
-    margin-top: -10px;
-}
-
-</style>
       
          <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
@@ -108,18 +109,7 @@
               <div class="menu_section">
                 <ul class="nav side-menu">
 				        <h3>MAIN</h3>
-				
-                <!--  <li >
-                      <a href="<?php echo base_url('Admin/customers_list');?>"><img src="<?php echo base_url('assets/images/icons_ncl/Usersx.png');?>" />&nbsp;&nbsp;&nbsp;&nbsp;Customers</a>
-                    </li>
-					
-					 <?php  //if(accessrole('Orders',P_READ)){ ?> 
-              
-				  <li>
-                      <a href="<?php echo base_url('Orders'); ?>"><img src="<?php echo base_url('assets/images/icons_ncl/Productsx.png');?>" />&nbsp;&nbsp;&nbsp;&nbsp;Orders</a>
-                    </li>-->
-
-                  <?php //}?>
+			
 					 <ul class="nav side-menu">
 					<li><a href="<?php echo base_url('Admin/index');?>"><i class="fa fa-dashboard"></i> Dashboard</a>
 					
@@ -132,10 +122,10 @@
                     </ul>
                 </ul>
 					 <ul class="nav side-menu">
-					<li><a><i class="fa fa-car"></i> &nbsp;&nbsp;Hirers<span class="fa fa-chevron-down"></span></a>
-					<ul class="nav child_menu">
+					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"current-page"; } ?>'><a><i class="fa fa-car"></i> &nbsp;&nbsp;Hirers<span class="fa fa-chevron-down"></span></a>
+					<ul class="nav child_menu <?php if($this->uri->segment(2) =="hirers_create"){echo"style='display:block'"; } ?>" >
 					
-					<li><a href="<?php echo base_url('Admin/hirers');?>">Hirer</a></li>
+					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"style='display:block'"; } ?>'><a href="<?php echo base_url('Admin/hirers');?>">Hirer</a></li>
 					<li><a href="<?php echo base_url('Admin/approve_hirer');?>">Approve a Hirer</a></li>
 					<li><a href="<?php echo base_url('Admin/active_hirer');?>">Active Hirer List</a></li>
 					<li><a href="<?php echo base_url('Admin/remove_hirer');?>">Remove a Hirer</a></li>
@@ -157,25 +147,7 @@
 					<li><a href="<?php echo base_url('Admin/role_list');?>">Roles</a></li>
                     </ul>
                 </ul>
-               <!--  <?php  //if(accessrole('Users',P_READ)){ ?>
-                    <li>
-                      <a href="<?php echo base_url('Admin/user_list'); ?>" ><img src="<?php echo base_url('assets/images/icons_ncl/Usersx.png');?>" />&nbsp;&nbsp;&nbsp;&nbsp;Users</a>
-                    </li> 
-                  <?php //}?>
-                   
-                      <?php  //if(accessrole('Roles',P_READ)){ ?> 
-                    <li >
-                      <a href="<?php echo base_url('Admin/role_list');?>"><img src="<?php echo base_url('assets/images/icons_ncl/Rolesx.png');?>" />&nbsp;&nbsp;&nbsp;&nbsp;Roles</a>
-                    </li> 
-               <?php //}?> 
-			   
-			     <?php // if(accessrole('Users',P_READ)){ ?>
-                  <li>
-                      <a href="<?php echo base_url('Settings'); ?>" ><img src="<?php echo base_url('assets/images/icons_ncl/Usersx.png');?>" />&nbsp;&nbsp;&nbsp;&nbsp;Settings</a>
-                    </li>  
-                  <?php// }?>-->
-
-              
+             
               </ul>
             </div>
           </div>
