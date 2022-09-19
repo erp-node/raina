@@ -101,6 +101,8 @@
     </div>
   </div>
 </div>
+</div>
+</div>
 <script>
   $(document).ready(function() {
       $('#roles_dt').DataTable({
@@ -108,8 +110,8 @@
     } );
   });
 </script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
-<script src="<?php echo base_url('assets/js/file-explore.js');?>"></script> 
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script src="<?php //echo base_url('assets/js/file-explore.js');?>"></script> 
 <script>
 $(document).ready(function() {
             $(".file-tree").filetree();
@@ -128,4 +130,4 @@ $(document).ready(function() {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script> -->
