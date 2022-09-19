@@ -5,7 +5,7 @@
   <div class="row">
               <div class="col-md-10 title_left">
                 <ul class="breadcrumb" id="breadcrumb">
-                  <li><a href="<?php echo base_url('Admin/dashboard');?>">HOME</a></li>
+                  <li><a href="<?php echo base_url('Admin/index');?>">HOME</a></li>
                   <li><a href="<?php echo base_url('Admin/Profile_list');?>">&nbsp;&nbsp;USER LIST</a></li>   
                   <li style=" display: none;"><a href="#"></a></li>
                 

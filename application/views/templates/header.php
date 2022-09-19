@@ -115,17 +115,17 @@
 					
                 </ul>
 					 <ul class="nav side-menu">
-					<li><a><i class="fa fa-car"></i>Fleet<span class="fa fa-chevron-down"></span></a>
-					<ul class="nav child_menu">
-					<li><a href="<?php echo base_url('Admin/vehical');?>">Vehicles</a></li>
-					<li><a href="<?php echo base_url('Admin/damages');?>">Damages</a></li>
+					<li  class ='<?php if($this->uri->segment(2) =="vehical_create" || $this->uri->segment(2) =="damages_create"){echo"current-page active"; } ?>'><a><i class="fa fa-car"></i>Fleet<span class="fa fa-chevron-down"></span></a>
+					<ul class="nav child_menu" <?php if($this->uri->segment(2) =="vehical_create"|| $this->uri->segment(2) =="damages_create"){echo"style='display:block'"; } ?>>
+					<li  class ='<?php if($this->uri->segment(2) =="vehical_create"){echo"current-page"; } ?>'><a href="<?php echo base_url('Admin/vehical');?>">Vehicles</a></li>
+					<li  class ='<?php if($this->uri->segment(2) =="damages_create"){echo"current-page"; } ?>'><a href="<?php echo base_url('Admin/damages');?>">Damages</a></li>
                     </ul>
                 </ul>
 					 <ul class="nav side-menu">
-					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"current-page"; } ?>'><a><i class="fa fa-car"></i> &nbsp;&nbsp;Hirers<span class="fa fa-chevron-down"></span></a>
-					<ul class="nav child_menu <?php if($this->uri->segment(2) =="hirers_create"){echo"style='display:block'"; } ?>" >
+					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"current-page active"; } ?>'><a><i class="fa fa-car"></i> &nbsp;&nbsp;Hirers<span class="fa fa-chevron-down"></span></a>
+					<ul class="nav child_menu " <?php if($this->uri->segment(2) =="hirers_create"){echo"style='display:block'"; } ?>>
 					
-					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"style='display:block'"; } ?>'><a href="<?php echo base_url('Admin/hirers');?>">Hirer</a></li>
+					<li class ='<?php if($this->uri->segment(2) =="hirers_create"){echo"current-page"; } ?>'><a href="<?php echo base_url('Admin/hirers');?>">Hirer</a></li>
 					<li><a href="<?php echo base_url('Admin/approve_hirer');?>">Approve a Hirer</a></li>
 					<li><a href="<?php echo base_url('Admin/active_hirer');?>">Active Hirer List</a></li>
 					<li><a href="<?php echo base_url('Admin/remove_hirer');?>">Remove a Hirer</a></li>
@@ -133,7 +133,7 @@
                 </ul>
 					
 					<ul class="nav side-menu">
-					<li><a><i class="fa fa-book"></i>Booking<span class="fa fa-chevron-down"></span></a>
+					<li ><a><i class="fa fa-book"></i>Booking<span class="fa fa-chevron-down"></span></a>
 					<ul class="nav child_menu">
 					<li><a href="#">Make a Booking</a></li>
 					<li><a href="#">Cancle a Booking</a></li>
@@ -141,10 +141,10 @@
                 </ul>
                  <h3></h3>
                <ul class="nav side-menu">
-					<li><a><i class="fa fa-cog"></i>Settings<span class="fa fa-chevron-down"></span></a>
-					<ul class="nav child_menu">
-					<li><a href="<?php echo base_url('Admin/user_list'); ?>">User Profile</a></li>
-					<li><a href="<?php echo base_url('Admin/role_list');?>">Roles</a></li>
+					<li   class ='<?php if($this->uri->segment(2) =="user_insert" || $this->uri->segment(2) =="roles_insert"){echo"current-page active"; } ?>'><a><i class="fa fa-cog"></i>Settings<span class="fa fa-chevron-down"></span></a>
+					<ul class="nav child_menu" <?php if($this->uri->segment(2) =="user_insert"|| $this->uri->segment(2) =="roles_insert"){echo"style='display:block'"; } ?>>
+					<li  class ='<?php if($this->uri->segment(2) =="user_insert"){echo"current-page"; } ?>'><a href="<?php echo base_url('Admin/user_list'); ?>">User Profile</a></li>
+					<li  class ='<?php if($this->uri->segment(2) =="roles_insert"){echo"current-page"; } ?>'><a href="<?php echo base_url('Admin/role_list');?>">Roles</a></li>
                     </ul>
                 </ul>
              

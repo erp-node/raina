@@ -3,7 +3,7 @@
        <div class="page-title">
               <div class="title_left" id="in_voice">
                 <ul class="breadcrumb" id="breadcrumb">
-                  <li><a href="<?php echo base_url('Admin/dashboard');?>">HOME</a></li>
+                  <li><a href="<?php echo base_url('Admin/index');?>">HOME</a></li>
                   <li><a href="<?php echo base_url('Admin/user_list');?>">&nbsp;&nbsp;USER LIST</a></li>   
                   <li><a href="<?php echo base_url('Admin/user_view/');?>">&nbsp;&nbsp;USER VIEW</a></li>  
                   <li style=" display: none;"><a href="#"></a></li>
