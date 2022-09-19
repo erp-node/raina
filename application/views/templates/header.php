@@ -85,6 +85,7 @@
     max-width: none;
     margin-top: -10px;
 }
+
 </style>
       
          <div class="col-md-3 left_col">

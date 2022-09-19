@@ -59,14 +59,14 @@
                       <div class="form-group">
                         <label  for="">Circumstance <span class="required">*</span>
                         </label>
-                        <input type="text" class="form-control" name="" id="" value="">
+                        <input type="text" class="form-control" name="circumstance" id="circumstance" value="">
                         </div>
                       </div>
                      <div class="col-md-3 col-sm-3 col-xs-12">
                       <div class="form-group">
                         <label  for="">Registration Number <span class="required">*</span>
                         </label>
-                          <select class="form-control" name="imageDiv">
+                          <select class="form-control" name="reg_num" id="reg_num">
 						  
 						<option> </option>
 						<option>HW70WDM (VFC Hire) </option>
@@ -79,13 +79,13 @@
                         <label  for="">Estimated Cost<span class="required">*</span>
                         </label>
                         
-                       <input type="text" class="form-control" name="" id="" value="">
+                       <input type="text" class="form-control" name="estimated_cost" id="estimated_cost" value="">
                         </div>
                       </div>
                        <div class="col-md-3 col-sm-3 col-xs-12">
                       <div class="form-group">
                         <label  for="">Booking referance number  </label>
-                          <select class="form-control">
+                          <select class="form-control" name="booking_ref_num" id="booking_ref_num">
 						<option> </option>
 						<option> </option>
 						</select>
@@ -214,12 +214,12 @@
                       <div class="form-group">
                         <label  for="">Damage Kind <span class="required">*</span>
                         </label>
-                          <select id="damage_kind" class="form-control">
-						<option>Scratch</option>
-						<option>Dent</option>
-						<option>Chip </option>
-						<option>Scraff </option>
-						<option>Others </option>
+                          <select class="form-control" name="damage_kind"  id="damage_kind" >
+						<option value="Scratch">Scratch</option>
+						<option  value="Dent">Dent</option>
+						<option  value="Chip">Chip </option>
+						<option  value="Scraff">Scraff </option>
+						<option  value="Others">Others </option>
 						</select>
                         </div>
                       </div>
@@ -228,7 +228,7 @@
                       <div class="form-group">
                         <label  for="">Damage Details<span class="required">*</span>
                         </label>
-                        <textarea name="comment" class="form-control " rows="4" id="comment" ></textarea>
+                        <textarea name="damage_details" class="form-control " rows="4" id="damage_details" ></textarea>
                         </div>
                       </div>
 				
@@ -289,19 +289,19 @@
                         <label  for="">Title<span class="required">*</span>
                         </label>
                         
-                       <input type="text" class="form-control" id="title">
+                       <input type="text" class="form-control" id="title" name="title">
                         </div>
                       </div>
 					    <div class="col-md-3 col-sm-3 col-xs-12">
                       <div class="form-group">
                         <label  for="">Damage Kind <span class="required">*</span>
                         </label>
-                          <select id="damage_kind" class="form-control">
-						<option>Scratch</option>
-						<option>Dent</option>
-						<option>Chip </option>
-						<option>Scraff </option>
-						<option>Others </option>
+                          <select id="damage_kind" class="form-control" name="damage_kind">
+						<option value="Scratch">Scratch</option>
+						<option value="Dent">Dent</option>
+						<option value="Chip">Chip </option>
+						<option value="Scraff">Scraff </option>
+						<option value="Otherss">Others </option>
 						</select>
                         </div>
                       </div>
@@ -310,11 +310,11 @@
                       <div class="form-group">
                         <label  for="">Damage Area <span class="required">*</span>
                         </label>
-                          <select id="damage_area" class="form-control">
-						<option>Dashboard</option>
-						<option>Steering-Wheel</option>
-						<option>Seat </option>
-						<option>Carpet </option>
+                          <select id="damage_area" class="form-control" name="damage_area">
+						<option value="Dashboard">Dashboard</option>
+						<option value="Steering-Wheel">Steering-Wheel</option>
+						<option value="Seat">Seat </option>
+						<option value="Carpet">Carpet </option>
 						</select>
                         </div>
                       </div>
@@ -322,7 +322,7 @@
                       <div class="form-group">
                         <label  for="">Damage Details<span class="required">*</span>
                         </label>
-                        <textarea name="comment" class="form-control " rows="4" id="comment" ></textarea>
+                        <textarea name="damage_details" class="form-control " rows="4" id="damage_details" ></textarea>
                         </div>
                       </div>
 					
@@ -477,6 +477,7 @@ id="myCanvas" width="150" height="400" style="margin-top: 20px;background-repeat
 	$(document).ready(function() {
     $('#customers_list').DataTable({
       dom: 'Bfrtip',
+	  fixedHeader: true,
 	  pagingType: 'full_numbers',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
@@ -574,7 +575,7 @@ function drawcircle()
  </script>
 
  <script>
- document.querySelector("select[name=imageDiv]").addEventListener("change", function() {
+ document.querySelector("select[name=reg_num]").addEventListener("change", function() {
             let planType = this.value;
             if (planType === "HW70WDM (VFC Hire)") {
                 document.querySelector(".smallDiv").style.display = 'block';
@@ -625,7 +626,7 @@ $('#downloadLink').click(function(){
 	</script>
 	‎ <script type="text/babel">
             function Message() {
-                return     <select class="form-control" name="imageDiv">
+                return     <select class="form-control" name="reg_num">
 						  
 						<option> </option>
 						<option>HW70WDM (VFC Hire) </option>

@@ -483,6 +483,7 @@
                        <label for="planType">Source Type</label>
                          <select  class="form-control" name="planType" id="planType" value="">
 						 <option > Select Option </option>
+						 <option value="Owned"> Owned </option>
 						 <option value="Leased"> Leased </option>
 						 <option value="Financed">Financed  </option>
 						 <option value="Rented"> Rented </option>
@@ -490,6 +491,30 @@
                         
                         </div>
                       </div>
+					  <!-- owned-->
+					   <div class="ownedDiv" style="display:none;">
+					   <div class="col-md-4 col-sm-4 col-xs-12">
+                      <div class="form-group">
+                        <label  for="">Purchased From</label>
+                          <input type="text" class="form-control" name="purchased_from" id="purchased_from" value="">
+                        </div>
+                      </div>
+					  <div class="col-md-4 col-sm-4 col-xs-12">
+                      <div class="form-group">
+                        <label  for="">Purchased Price</label>
+                          <input type="text" class="form-control" name="purchased_price" id="purchased_price" value="">
+                        </div>
+                      </div>
+					 
+					   <div class="col-md-4 col-sm-4 col-xs-12">
+                      <div class="form-group">
+                        <label  for="">Purchased  Date</label>
+                          <input type="text" class="form-control" name="purchased_date" id="purchased_date" value="">
+                        </div>
+                      </div>
+					  
+					  </div>
+					  <!-- end Owned -->
 					  <!--Leased-->
 					  <div class="leasedDiv" style="display:none;">
 					   <div class="col-md-4 col-sm-4 col-xs-12">
@@ -731,6 +756,10 @@
 });
 </script>  
 <script>
+$('#purchased_date').datetimepicker({
+		timepicker:false,
+        format:'d.m.Y'
+    });
     $('#leased_from_date').datetimepicker({
 		timepicker:false,
         format:'d.m.Y'
@@ -769,14 +798,22 @@ document.querySelector("select[name=planType]").addEventListener("change", funct
                 document.querySelector(".leasedDiv").style.display = 'block';
                 document.querySelector(".financedDiv").style.display = 'none';
                 document.querySelector(".rentedDiv").style.display = 'none';
+                document.querySelector(".ownedDiv").style.display = 'none';
             } else if (planType === "Financed") {
                 document.querySelector(".leasedDiv").style.display = 'none';
                 document.querySelector(".financedDiv").style.display = 'block';
                 document.querySelector(".rentedDiv").style.display = 'none';
+                document.querySelector(".ownedDiv").style.display = 'none';
             }else if (planType === "Rented") {
                 document.querySelector(".leasedDiv").style.display = 'none';
                 document.querySelector(".financedDiv").style.display = 'none';
                 document.querySelector(".rentedDiv").style.display = 'block';
+                document.querySelector(".ownedDiv").style.display = 'none';
+            } else if (planType === "Owned") {
+                document.querySelector(".leasedDiv").style.display = 'none';
+                document.querySelector(".financedDiv").style.display = 'none';
+                document.querySelector(".rentedDiv").style.display = 'none';
+                document.querySelector(".ownedDiv").style.display = 'block';
             }
         });	
 		document.querySelector("select[name=imageDiv]").addEventListener("change", function() {
@@ -800,6 +837,7 @@ document.querySelector("select[name=planType]").addEventListener("change", funct
 $(document).ready(function() {
     $('#customers_list').DataTable({
       dom: 'Bfrtip', 
+	  fixedHeader: true,
 	  pagingType: 'full_numbers',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
@@ -809,6 +847,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#customers_list_a').DataTable({
       dom: 'Bfrtip',
+	  fixedHeader: true,
 	  pagingType: 'full_numbers',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
@@ -818,6 +857,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#customers_list_b').DataTable({
       dom: 'Bfrtip',
+	  fixedHeader: true,
 	  pagingType: 'full_numbers',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'

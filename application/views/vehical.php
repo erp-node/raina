@@ -59,6 +59,7 @@
                           <td>Petrol</td>
                           <td><a href="#" style="color:red;"><u>Delete</u></a></td>
                         </tr>
+						
                       </tbody>
                     </table>
                   </div>
@@ -73,6 +74,7 @@
 $(document).ready(function() {
     $('#customers_list').DataTable({
       dom: 'Bfrtip',
+	  fixedHeader: true,
 	  pagingType: 'full_numbers',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
